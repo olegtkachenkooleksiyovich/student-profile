@@ -1,0 +1,36 @@
+@use "variables" as *;
+@use "sass:color";
+
+/* === Кнопки === */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: $primary-color;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: color.adjust($primary-color, $lightness: -10%);
+
+    }
+}
+
+/* === Карточка (Card) === */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === Форма === */
+.input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
