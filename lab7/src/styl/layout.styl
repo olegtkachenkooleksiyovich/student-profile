@@ -1,0 +1,32 @@
+.nav
+    background: #34495e
+    padding: 10px 0
+
+    &__list
+        display: flex
+        justify-content: center
+        list-style: none
+
+    &__item
+        margin: 0 15px
+
+    &__link
+        color: white
+        font-weight: bold
+        transition: color 0.3s
+
+        &:hover
+            color: #50e3c2
+@media screen and (max-width: 768px) {
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+}

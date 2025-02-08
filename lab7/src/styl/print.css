@@ -1,0 +1,53 @@
+@media print {
+    /* Приховати всі елементи, крім контенту */
+    body * {
+        visibility: hidden;
+    }
+
+    .container, .container * {
+        visibility: visible;
+    }
+
+    .header, .footer {
+        display: none;
+    }
+
+    /* Видалити кольори та фонові зображення */
+    body {
+        background: none;
+        color: black;
+    }
+
+    a:after {
+        content: " (" attr(href) ") ";
+        font-size: 12px;
+    }
+
+    /* Встановити шрифти з засічками */
+    body {
+        font-family: "Times New Roman", Georgia, Palatino, serif;
+    }
+
+    /* Встановити поля 50px */
+    @page {
+        margin: 50px;
+    }
+	nav {
+    display: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, p {
+    text-align: center;
+    margin: 10px 0;
+}
+.sidebar, .advertisement {
+    display: none;
+}
+a:after {
+    content: " (" attr(href) ")";
+}
+
+}

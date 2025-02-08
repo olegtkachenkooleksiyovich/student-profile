@@ -1,0 +1,231 @@
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./src/styl/index.styl ***!
+  \****************************************************************************************************************/
+@import url(https://necolas.github.io/normalize.css/latest/normalize.css);
+/*!********************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/stylus-loader/dist/cjs.js!./src/styl/index.styl (1) ***!
+  \********************************************************************************************************************/
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #66b2b2 30%, #b2d8d8 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+h1,
+h2,
+h3 {
+  color: #66b2b2;
+}
+.nav {
+  background: #34495e;
+  padding: 10px 0;
+}
+.nav__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav__item {
+  margin: 0 15px;
+}
+.nav__link {
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav__link:hover {
+  color: #50e3c2;
+}
+@media screen and (max-width: 768px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav__item {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #66b2b2;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: #54a8a8;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+:root {
+  --primary-color: #099;
+  --secondary-color: #1d7373;
+  --dark-color: #006363;
+  --accent-color: #3cc;
+  --light-color: #5ccccc;
+  --gradient: linear-gradient(135deg, var(--primary-color), var(--light-color));
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--gradient);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  background: var(--dark-color);
+  padding: 20px 0;
+  color: #fff;
+}
+.nav__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav__link:hover {
+  color: var(--accent-color);
+}
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.news-item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.news-item__image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.news-item__content {
+  padding: 15px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.gallery figure {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--dark-color);
+}
+.footer {
+  background: var(--dark-color);
+  color: #fff;
+  padding: 20px;
+}
+.ie-warning {
+  background: #f00;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  display: none;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ie-warning {
+    display: block;
+  }
+}
+
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/styl/print.css ***!
+  \**********************************************************************/
+@media print {
+    /* Приховати всі елементи, крім контенту */
+    body * {
+        visibility: hidden;
+    }
+
+    .container, .container * {
+        visibility: visible;
+    }
+
+    .header, .footer {
+        display: none;
+    }
+
+    /* Видалити кольори та фонові зображення */
+    body {
+        background: none;
+        color: black;
+    }
+
+    a:after {
+        content: " (" attr(href) ") ";
+        font-size: 12px;
+    }
+
+    /* Встановити шрифти з засічками */
+    body {
+        font-family: "Times New Roman", Georgia, Palatino, serif;
+    }
+
+    /* Встановити поля 50px */
+    @page {
+        margin: 50px;
+    }
+	nav {
+    display: none;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, p {
+    text-align: center;
+    margin: 10px 0;
+}
+.sidebar, .advertisement {
+    display: none;
+}
+a:after {
+    content: " (" attr(href) ")";
+}
+
+}
+
