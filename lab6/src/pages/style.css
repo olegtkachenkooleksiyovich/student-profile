@@ -1,0 +1,101 @@
+/* Імпорт скидання стилів */
+@import url("reset.css");
+
+/* Глобальні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #009999, #5CCCCC);
+    color: #333;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Стилі BEM для навігації */
+.nav {
+    background: #34495e;
+    padding: 10px 0;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.nav__item {
+    margin: 0 15px;
+}
+
+.nav__link {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #50e3c2;
+}
+
+/* Стилізація галереї */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery__item img {
+    width: 150px;
+    height: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery__item img:hover {
+    transform: scale(1.1);
+}
+
+/* Вирівнювання контенту по центру */
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Використання псевдоелементів */
+.content::after {
+    content: "Кінець розділу";
+    display: block;
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
